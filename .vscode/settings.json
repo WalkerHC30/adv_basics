@@ -1,0 +1,12 @@
+{
+  "workbench.colorCustomizations": {
+    "editor.background": "#061d22",         // 編輯器背景顏色
+    "sideBar.background": "#061d22",        // 側邊欄背景顏色
+    "activityBar.background": "#061d22",    // 活動欄背景顏色
+    "statusBar.background": "#181e21",      // 狀態列背景顏色
+    "titleBar.activeBackground": "#061d22", // 標題列背景顏色
+    "editorLineNumber.foreground": "#b9bbb4", // 行號顏色
+    "tab.activeBackground": "#03151a",      // 當前標籤背景顏色
+    "tab.inactiveBackground": "#042932"     // 非當前標籤背景顏色
+  }
+}
