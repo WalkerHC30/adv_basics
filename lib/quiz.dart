@@ -14,6 +14,8 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
+  final List<String> selectedAnswers = [];
+
   // var activeScreen = const StartScreen(); 這裡會自動把activeScreen型別變為StartScreen的
   // Widget? activeScreen; //注意 宣告要用Widget放寬條件
   var activeScreen = 'start-screen';
@@ -30,11 +32,15 @@ class _QuizState extends State<Quiz> {
     });
   }
 
+  void choiceAnswer(String answer) {
+    selectedAnswers.add(answer);
+  }
+
   @override
   Widget build(BuildContext context) {
     Widget screenWidge = StartScreen(switchScreen);
     if (activeScreen == 'question-screen') {
-      screenWidge = const QuestionsScreen();
+      screenWidge = QuestionsScreen(onSelectAnswer: choiceAnswer);
     }
     return MaterialApp(
       home: Scaffold(
